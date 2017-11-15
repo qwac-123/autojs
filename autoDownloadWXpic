@@ -1,0 +1,10 @@
+"auto";
+//v1711151054
+launchApp("微信");
+for (i = 0; i < 9999; i++) {
+    id("bgn").packageName("com.tencent.mm").clickable().className("android.view.View").click()
+    sleep(200)
+    //heng zong heng zong shijian
+    swipe(50, 500, 800, 500, 100)//next pic
+    sleep(200)
+}
