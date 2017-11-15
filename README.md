@@ -1,0 +1,2 @@
+# autojs
+for android autojs
