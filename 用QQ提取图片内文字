@@ -1,0 +1,33 @@
+"auto";
+//先要在QQ的聊天框打开要转换的第一张图
+receiver="我的电脑"//你想要发给谁
+//var receiver = rawInput("输入你想发的人的名字？");
+launchApp("QQ");
+
+for (i = 0; i < 9999; i++) {
+    //右下角三个点
+    desc("更多操作").packageName("com.tencent.mobileqq").clickable().className("android.widget.ImageButton").click()
+    //提取图中文字
+    sleep(500)
+    click("提取图中文字")
+    //提取文字后右下角三个点
+    sleep(500)
+    desc("分享").packageName("com.tencent.mobileqq").clickable().className("android.widget.ImageView").click()
+    //发送给好友
+    sleep(500)
+    click("发送给好友");
+    sleep(500)
+    //选择自己
+    click(receiver);
+    sleep(500)
+    //确认发送给自己
+    click("发送");
+    sleep(500)
+    //退出提取文字
+    desc("关闭").packageName("com.tencent.mobileqq").clickable().className("android.widget.ImageView").click()
+    sleep(500)
+    //startx starty heng zong shijian
+    swipe(900, 900, 50, 900, 200) // 看右边
+    sleep(500)
+
+}
